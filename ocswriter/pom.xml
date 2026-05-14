@@ -52,16 +52,7 @@
 
     <build>
         <plugins>
-            <!-- compiler plugin -->
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>${jdk-version}</source>
-                    <target>${jdk-version}</target>
-                    <encoding>${project-sourceEncoding}</encoding>
-                </configuration>
-                <version>3.2</version>
-            </plugin>
+            <!-- 编译器由父 POM datax-all 统一管理，避免子模块单独指定版本导致无法解析 -->
             <!-- assembly plugin -->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
